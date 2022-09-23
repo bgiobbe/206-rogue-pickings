@@ -159,7 +159,7 @@ header nav ul li a{
 	padding: 0;
 }
 .menu li {
-	padding: 0.625em 0;
+	padding: 0.625em 0.625em 0.625em 0;
 	color:#77a466;
 }
 
@@ -191,3 +191,57 @@ footer span {
 	font-size: 0.875em;
 }
 
+/***** TABLETS and bigger *****/
+
+/* Change .bottom section to 3 columns */
+
+@media (min-width: 768px) {
+
+.section-one,
+.section-two,
+.section-three {
+	flex-basis: 33%;
+}
+
+.section-one {
+    flex-grow: 1;
+}
+
+.section-two {
+	border-left: 1px solid #eee;
+	border-right: 1px solid #eee;
+    box-sizing: border-box;
+    flex-grow: 10;
+    padding: 0 1em;
+}
+
+.section-three {
+    box-sizing: border-box;
+    padding-left: 1em;
+}
+
+} /* end of TABLETS and bigger */
+
+/***** DESKTOP and bigger *****/
+
+/* Render navigation links horizontally */
+
+@media (min-width: 1200px) {
+
+header div {
+    border-bottom: none;
+	justify-content: flex-start;
+	width: 60%;
+}
+
+header nav {
+	justify-content: flex-end;
+	width: 40%;
+}
+
+header nav ul {
+	justify-content: flex-end;
+	flex-flow: row;
+}
+
+} /* end of DESKTOP and bigger */
